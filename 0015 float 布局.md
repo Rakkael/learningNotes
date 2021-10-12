@@ -15,7 +15,7 @@ clearfix::after {
 ```
 <a name="ria35"></a>
 ### IE 中存在的一些 BUG
-在 IE6/7 中，margin 存在双倍 BUG；即 `margin-left: 10px` 会被认为 20px，
+在 IE6/7 中，margin 存在双倍 BUG；即 `margin-left: 10px` 会被认为 20px。
 
 1. 可以通过在 margin 前加下划线解决，如
 ```css
@@ -35,4 +35,21 @@ clearfix::after {
 	display: inline-block; 
 }
 ```
+<a name="Uk3j4"></a>
+### 居中
+对于一个块元素，如果左边 margin 为 auto，右边 margin 也为 auto，那么这个块元素将会居中。
+```css
+/* 可能会覆盖 margin-top，margin-bottom */
+.block {
+	margin: 0 auto;
+}
+
+/* 不会覆盖 margin-top，margin-bottom */
+.block {
+	margin-left: auto;
+ 	margin-right: auto;
+}
+```
+在 Jsbin 中的实现：<br />[用 float 实现双栏布局](https://jsbin.com/pivevonixu/edit?html,css,output)​<br />用 float 实现三栏布局<br />用 float 实现四栏布局<br />用 float 实现平均布局<br />​
+
 ​<br />
