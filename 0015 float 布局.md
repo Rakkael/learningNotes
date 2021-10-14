@@ -50,6 +50,24 @@ clearfix::after {
  	margin-right: auto;
 }
 ```
-在 Jsbin 中的实现：<br />[用 float 实现双栏布局](https://jsbin.com/pivevonixu/edit?html,css,output)​<br />用 float 实现三栏布局<br />用 float 实现四栏布局<br />用 float 实现平均布局<br />​
+在 Jsbin 中的实现：
+
+1. ​[用 float 实现双栏布局](https://jsbin.com/wunukipoqu/1/edit?html,css,output)
+
+知识点：
+
+- `float: right;` 实现右对齐布局。
+2. ​[用 float 实现三栏布局](https://jsbin.com/bunesirawe/1/edit?html,css,output)
+
+知识点：
+
+- 当`border-box: box-sizing;`时，border 会占用宽度。因此类名为`content`的元素的实际宽度为 400px - 1px -1px。这种情况下，使用`outline`代替`border`进行调试，`outline`不会占用边框宽度。
+3. 用 float 实现四栏布局
+
+
+
+4. 用 float 实现平均布局
+
+​
 
 ​<br />
