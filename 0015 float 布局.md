@@ -62,6 +62,9 @@ clearfix::after {
 知识点：
 
 - 当`border-box: box-sizing;`时，border 会占用宽度。因此类名为`content`的元素的实际宽度为 400px - 1px -1px。这种情况下，使用`outline`代替`border`进行调试，`outline`不会占用边框宽度。
+- 当 content 宽度为固定时，使用`margin: 0 auto;`即可实现居中对齐。但这种方法会覆盖 margin-top 与 margin-bottom，因此使用`margin-left: auto;`与`margin-right: auto;`更好一些。
+> 对于 CSS 不该写的代码不要写，只写起决定作用的样式，不写多余的内容。
+
 3. 用 float 实现四栏布局
 
 
