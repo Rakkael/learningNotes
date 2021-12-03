@@ -46,4 +46,36 @@ z-index 在使用时需要这个元素有 `position:relative;` 属性。
 - 配合 z-index
 > 手机上尽量不要使用这个属性，bug 很多。
 
-注意：某些新属性，例如 transform 会导致它不以视口定位，而出现 bug，语义不够正交。
+注意：某些新属性，例如 transform 会导致它不以视口定位，而出现 bug，语义不够正交。<br />例如：[https://jsbin.com/qiqalavofa/1/edit?html,css,output](https://jsbin.com/qiqalavofa/1/edit?html,css,output)
+```html
+<div class="container">
+	<div class="fixed"></div>
+</div>
+```
+```css
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	width: 100vw;
+	height:50vh;
+	border: 1px red solid;
+}
+.fixed{
+	border: 1px gray solid;
+	width: 50px;
+	height: 50px;
+	background-color: gray;
+	position: fixed;
+	left:10px;
+	bottom:10px;
+}
+.container{
+	transform: scale(0.9);  /* transform 属性会使 fixed 相对包裹它的第一个 transform 属性生效的元素进行定位 */
+}
+```
+<a name="fMPCa"></a>
+### sticky
+粘滞定位。使一个元素即将超出视口时，会粘滞在视口的边缘。<br />兼容性极差，基本上不用。
